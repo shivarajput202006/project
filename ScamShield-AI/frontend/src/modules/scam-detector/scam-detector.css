@@ -1,0 +1,173 @@
+.scam-detector-main { width: min(1280px,100%); padding-top: 25px; }
+.scam-detector-titlebar { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 20px; }
+.scam-detector-titlebar .dashboard-eyebrow { margin-top: 12px; }
+.scam-detector-titlebar h1 { margin: 0 0 7px; font-size: clamp(22px,2.4vw,30px); letter-spacing: -1px; }
+.scam-detector-titlebar p { margin: 0; color: #94a3b8; font-size: 11px; line-height: 1.65; }
+.scam-back-link { display: inline-flex; align-items: center; gap: 5px; color: #91a0b5; font-size: 9px; }
+.scam-back-link:hover { color: #e2e8f0; }
+.scam-title-shield { width: 47px; height: 47px; display: grid; flex: 0 0 auto; place-items: center; border: 1px solid rgba(6,182,212,.19); border-radius: 13px; background: rgba(6,182,212,.08); color: #58d1e4; }
+.scam-detector-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.05fr); align-items: start; gap: 14px; }
+.scam-input-card,.scam-report-card,.scam-history-card,.scam-analysis-loader,.scam-results-placeholder { min-width: 0; border: 1px solid rgba(148,163,184,.12); border-radius: 11px; padding: 17px; background: linear-gradient(150deg,rgba(16,24,43,.93),rgba(11,19,34,.97)); }
+.scam-card-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+.scam-card-heading .dashboard-eyebrow { margin-bottom: 6px; }
+.scam-card-heading h2 { margin: 0; font-size: 14px; letter-spacing: -.3px; }
+.scam-input-type-selector { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 5px; margin-bottom: 15px; border: 1px solid rgba(148,163,184,.08); border-radius: 9px; padding: 4px; background: rgba(4,10,21,.4); }
+.scam-input-type { min-width: 0; min-height: 39px; display: flex; align-items: center; justify-content: center; gap: 6px; border: 1px solid transparent; border-radius: 6px; padding: 5px; background: transparent; color: #8290a5; font-size: 8px; cursor: pointer; transition: background .16s ease,color .16s ease,border-color .16s ease; }
+.scam-input-type svg { flex: 0 0 auto; }
+.scam-input-type:hover { color: #d7e3f2; }
+.scam-input-type.is-selected { border-color: rgba(37,99,235,.2); background: rgba(37,99,235,.13); color: #a9c5ff; }
+.scam-input-panel { min-width: 0; }
+.scam-field-label { display: flex; align-items: center; gap: 7px; color: #d8e2ef; font-size: 10px; font-weight: 650; }
+.scam-field-label svg { color: #5ccfe1; }
+.scam-field-help { margin: 6px 0 10px; color: #8290a5; font-size: 9px; line-height: 1.55; }
+.scam-textarea,.scam-text-input { width: 100%; min-width: 0; border: 1px solid rgba(148,163,184,.15); border-radius: 8px; outline: 0; padding: 11px 12px; background: rgba(4,10,21,.47); color: #e8eef7; font: 10px/1.65 "DM Sans",sans-serif; transition: border-color .16s ease,box-shadow .16s ease; }
+.scam-textarea { min-height: 178px; resize: vertical; }
+.scam-textarea::placeholder,.scam-text-input::placeholder { color: #65748a; }
+.scam-textarea:focus,.scam-text-input:focus { border-color: rgba(6,182,212,.55); box-shadow: 0 0 0 3px rgba(6,182,212,.07); }
+.scam-input-meta { display: flex; justify-content: space-between; gap: 9px; margin-top: 6px; color: #718198; font-size: 8px; }
+.scam-form-field { display: grid; gap: 6px; margin-top: 11px; }
+.scam-form-field > label { color: #b6c2d2; font-size: 9px; font-weight: 600; }
+.scam-email-fields .scam-field-label { margin-bottom: 10px; }
+.scam-email-fields .scam-textarea { min-height: 130px; }
+.scam-url-note { margin: 12px 0 0; border-left: 2px solid rgba(6,182,212,.45); padding-left: 9px; color: #8493a8; font-size: 9px; line-height: 1.6; }
+.scam-upload-dropzone { min-height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border: 1px dashed rgba(116,142,180,.3); border-radius: 9px; padding: 16px; background: rgba(4,10,21,.28); color: #8e9db2; text-align: center; cursor: pointer; transition: background .16s ease,border-color .16s ease; }
+.scam-upload-dropzone:hover,.scam-upload-dropzone:focus-within { border-color: rgba(6,182,212,.5); background: rgba(6,182,212,.045); }
+.scam-upload-dropzone.is-dragging { border-color: #06b6d4; background: rgba(6,182,212,.09); }
+.scam-upload-dropzone strong { color: #d8e2ee; font-size: 10px; }
+.scam-upload-dropzone > span:last-child { font-size: 8px; }
+.scam-upload-icon { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid rgba(6,182,212,.16); border-radius: 11px; background: rgba(6,182,212,.08); color: #5bcfe1; }
+.scam-visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; clip-path: inset(50%); }
+.scam-image-preview { max-width: 100%; max-height: 160px; border-radius: 6px; object-fit: contain; }
+.scam-upload-dropzone.has-file { min-height: 110px; }
+.scam-selected-file { display: flex; align-items: center; gap: 9px; margin-top: 10px; border: 1px solid rgba(148,163,184,.1); border-radius: 8px; padding: 9px; background: rgba(255,255,255,.02); }
+.scam-selected-file-icon { width: 31px; height: 31px; display: grid; flex: 0 0 auto; place-items: center; border-radius: 8px; background: rgba(37,99,235,.12); color: #83aaff; }
+.scam-selected-file-copy { min-width: 0; flex: 1; display: grid; gap: 3px; }
+.scam-selected-file-copy strong { overflow: hidden; color: #dce5f1; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.scam-selected-file-copy small { color: #7d8ca2; font-size: 8px; }
+.scam-remove-file { width: 29px; height: 29px; display: grid; flex: 0 0 auto; place-items: center; border: 0; border-radius: 6px; background: transparent; color: #91a0b5; cursor: pointer; }
+.scam-remove-file:hover { background: rgba(248,113,113,.09); color: #fca5a5; }
+.scam-inline-error,.scam-error-banner { border: 1px solid rgba(248,113,113,.24); border-radius: 7px; padding: 9px 10px; background: rgba(127,29,29,.15); color: #fecaca; font-size: 9px; line-height: 1.55; }
+.scam-inline-error { margin: 9px 0 0; }
+.scam-error-banner { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 10px 0; }
+.scam-error-banner button { flex: 0 0 auto; border: 0; background: transparent; color: #fecaca; font-size: 9px; font-weight: 700; text-decoration: underline; cursor: pointer; }
+.scam-upload-progress { margin-top: 12px; }
+.scam-progress-copy { display: flex; justify-content: space-between; margin-bottom: 6px; color: #9cabc0; font-size: 9px; }
+.scam-progress-copy > span { display: flex; align-items: center; gap: 6px; }
+.scam-progress-copy strong { color: #69d3e2; }
+.scam-progress-track { height: 4px; overflow: hidden; border-radius: 99px; background: rgba(148,163,184,.12); }
+.scam-progress-track span { height: 100%; display: block; border-radius: inherit; background: linear-gradient(90deg,#2563eb,#06b6d4); transition: width .16s ease; }
+.scam-submit-button { width: 100%; min-height: 42px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; margin-top: 15px; border: 1px solid rgba(37,99,235,.5); border-radius: 8px; padding: 0 14px; background: linear-gradient(105deg,#2563eb,#197edc); color: white; font-size: 10px; font-weight: 700; cursor: pointer; box-shadow: 0 7px 20px rgba(37,99,235,.17); }
+.scam-submit-button:hover:not(:disabled) { background: linear-gradient(105deg,#1d4ed8,#126cc3); }
+.scam-submit-button:disabled { opacity: .7; cursor: wait; }
+.scam-privacy-note { margin: 10px 0 0; color: #74839a; font-size: 8px; line-height: 1.6; }
+.scam-results-column { min-width: 0; }
+.scam-results-placeholder { min-height: 285px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 22px; text-align: center; }
+.scam-results-placeholder > span { width: 46px; height: 46px; display: grid; place-items: center; margin-bottom: 13px; border: 1px solid rgba(6,182,212,.18); border-radius: 13px; background: rgba(6,182,212,.07); color: #56d2e6; }
+.scam-results-placeholder > strong { color: #dce5f1; font-size: 11px; }
+.scam-results-placeholder > p { max-width: 340px; margin: 8px 0 12px; color: #8796aa; font-size: 9px; line-height: 1.65; }
+.scam-results-placeholder ul { display: grid; gap: 6px; margin: 0; padding: 0; color: #8190a5; font-size: 8px; line-height: 1.5; list-style: none; text-align: left; }
+.scam-results-placeholder li::before { margin-right: 7px; color: #59ccdf; content: "•"; }
+.scam-analysis-loader { min-height: 285px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.scam-loader-icon { width: 45px; height: 45px; display: grid; place-items: center; margin-bottom: 13px; border: 1px solid rgba(6,182,212,.2); border-radius: 14px; background: rgba(6,182,212,.075); color: #58d1e4; }
+.scam-analysis-loader > strong { color: #dce5f1; font-size: 11px; }
+.scam-analysis-loader p { margin: 7px 0 14px; color: #8796aa; font-size: 9px; }
+.scam-analysis-loader > svg { color: #58d1e4; }
+.scam-spin { animation: scam-spin .8s linear infinite; }
+@keyframes scam-spin { to { transform: rotate(360deg); } }
+.scam-report-card { padding: 16px; }
+.scam-report-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 13px; }
+.scam-report-header .dashboard-eyebrow { margin-bottom: 5px; }
+.scam-report-header h2 { margin: 0; font-size: 15px; }
+.scam-report-header p { margin: 5px 0 0; color: #8290a5; font-size: 9px; }
+.scam-secondary-button { min-height: 31px; display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; gap: 6px; border: 1px solid rgba(148,163,184,.14); border-radius: 7px; padding: 0 9px; background: rgba(255,255,255,.02); color: #b7c3d4; font-size: 8px; cursor: pointer; }
+.scam-secondary-button:hover { border-color: rgba(6,182,212,.28); color: #e1fbff; }
+.scam-risk-card { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 14px; border: 1px solid rgba(148,163,184,.11); border-radius: 9px; padding: 13px; background: rgba(6,12,24,.44); }
+.scam-risk-copy { min-width: 0; }
+.scam-risk-status { display: flex; align-items: center; gap: 7px; color: #f0f4fa; font-size: 10px; font-weight: 700; }
+.scam-risk-card.tone-low .scam-risk-status svg { color: #54d6a0; }
+.scam-risk-card.tone-review .scam-risk-status svg { color: #f5c46b; }
+.scam-risk-card.tone-high .scam-risk-status svg { color: #fb8798; }
+.scam-risk-card.tone-unverified .scam-risk-status svg { color: #74cfe0; }
+.scam-risk-copy p { max-width: 300px; margin: 6px 0 0; color: #8c9bb0; font-size: 8px; line-height: 1.5; }
+.scam-risk-score { width: 57px; height: 57px; display: flex; flex: 0 0 auto; flex-direction: column; align-items: center; justify-content: center; border-radius: 50%; background: conic-gradient(#06b6d4 var(--score),rgba(148,163,184,.12) 0); color: #edf5fc; }
+.scam-risk-score::before { position: absolute; width: 47px; height: 47px; border-radius: 50%; background: #111a2b; content: ""; }
+.scam-risk-score strong,.scam-risk-score span { position: relative; z-index: 1; }
+.scam-risk-score strong { font-size: 15px; line-height: 1; }
+.scam-risk-score span { margin-top: 2px; color: #8493a8; font-size: 7px; }
+.scam-risk-caption { position: absolute; right: 12px; bottom: 3px; width: 94px; color: #68778c; font-size: 6px; text-align: center; }
+.scam-report-section { margin-top: 14px; }
+.scam-report-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; color: #d9e3ef; font-size: 9px; font-weight: 700; }
+.scam-report-section-heading small { color: #77869b; font-size: 8px; font-weight: 500; }
+.scam-report-summary { display: flex; align-items: flex-start; gap: 8px; margin: 0; border: 1px solid rgba(148,163,184,.08); border-radius: 8px; padding: 10px; background: rgba(255,255,255,.018); color: #b6c3d4; font-size: 9px; line-height: 1.65; }
+.scam-report-summary svg { flex: 0 0 auto; margin-top: 1px; color: #66cfe0; }
+.scam-report-empty { margin: 0; color: #8290a5; font-size: 9px; line-height: 1.6; }
+.scam-evidence-list { display: grid; }
+.scam-evidence-item { display: flex; align-items: flex-start; gap: 9px; border-top: 1px solid rgba(148,163,184,.08); padding: 10px 0; }
+.scam-evidence-marker { width: 7px; height: 7px; flex: 0 0 auto; margin-top: 4px; border-radius: 50%; background: #f59e0b; box-shadow: 0 0 8px rgba(245,158,11,.2); }
+.scam-evidence-marker.is-muted { background: #55cddd; box-shadow: none; }
+.scam-evidence-copy { min-width: 0; flex: 1; }
+.scam-evidence-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.scam-evidence-heading strong { color: #d5dfec; font-size: 9px; }
+.scam-evidence-heading span { flex: 0 0 auto; border: 1px solid rgba(6,182,212,.12); border-radius: 999px; padding: 2px 6px; color: #7bcbd8; font-size: 7px; }
+.scam-evidence-copy > small { display: block; margin-top: 3px; color: #708098; font-size: 8px; }
+.scam-evidence-copy p { margin: 5px 0 0; color: #91a0b5; font-size: 8px; line-height: 1.6; overflow-wrap: anywhere; }
+.scam-recommendation-list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.scam-recommendation-list li { display: flex; align-items: flex-start; gap: 7px; color: #a8b6c9; font-size: 8px; line-height: 1.55; }
+.scam-recommendation-list svg { flex: 0 0 auto; color: #53cdaa; }
+.scam-verification-status { display: grid; gap: 4px; margin-top: 12px; border: 1px solid rgba(245,158,11,.13); border-radius: 7px; padding: 8px; background: rgba(245,158,11,.035); }
+.scam-verification-status strong,.scam-limitations > strong { color: #d6dfeb; font-size: 8px; }
+.scam-verification-status span { color: #c6aa72; font-size: 8px; line-height: 1.5; }
+.scam-limitations { margin-top: 10px; }
+.scam-limitations ul { display: grid; gap: 4px; margin: 5px 0 0; padding-left: 14px; color: #8493a8; font-size: 8px; line-height: 1.5; }
+.scam-report-timestamp { display: flex; align-items: center; gap: 5px; margin-top: 13px; color: #718198; font-size: 8px; }
+.scam-report-disclaimer,.scam-global-disclaimer { margin: 10px 0 0; border-left: 2px solid rgba(6,182,212,.35); padding-left: 8px; color: #7f8ea3; font-size: 8px; line-height: 1.6; }
+.scam-history-card { margin-top: 16px; }
+.scam-history-card .scam-card-heading { margin-bottom: 10px; }
+.scam-history-count { border: 1px solid rgba(148,163,184,.12); border-radius: 999px; padding: 4px 8px; color: #90a0b6; font-size: 8px; }
+.scam-history-loading,.scam-history-empty { padding: 18px 6px; color: #8190a5; font-size: 9px; line-height: 1.6; text-align: center; }
+.scam-history-empty p { margin: 0 0 7px; }
+.scam-text-button { border: 0; background: none; color: #67d0df; font-size: 9px; cursor: pointer; }
+.scam-history-list { display: grid; }
+.scam-history-item { width: 100%; min-width: 0; display: flex; align-items: center; gap: 10px; border: 0; border-top: 1px solid rgba(148,163,184,.08); padding: 10px 3px; background: transparent; text-align: left; cursor: pointer; }
+.scam-history-item:hover,.scam-history-item.is-loading { background: rgba(148,163,184,.035); }
+.scam-history-item:disabled { cursor: wait; opacity: .7; }
+.scam-history-risk { width: 8px; height: 8px; flex: 0 0 auto; border-radius: 50%; background: #64748b; }
+.scam-history-risk.risk-high_risk { background: #fb7185; }
+.scam-history-risk.risk-needs_review { background: #fbbf24; }
+.scam-history-risk.risk-low_risk { background: #34d399; }
+.scam-history-risk.risk-unverified { background: #22d3ee; }
+.scam-history-copy { min-width: 0; flex: 1; display: grid; gap: 4px; }
+.scam-history-copy strong { overflow: hidden; color: #d2dce9; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.scam-history-copy small { color: #7f8ea3; font-size: 8px; }
+.scam-history-score { flex: 0 0 auto; color: #9aa9bd; font-size: 8px; }
+.scam-global-disclaimer { margin: 14px 0 0; }
+@media (max-width: 1080px) {
+  .scam-detector-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 10px; }
+  .scam-input-card,.scam-report-card,.scam-history-card,.scam-analysis-loader,.scam-results-placeholder { padding: 13px; }
+}
+@media (max-width: 760px) {
+  .scam-detector-main { padding-top: 20px; }
+  .scam-detector-grid { grid-template-columns: 1fr; }
+  .scam-results-placeholder,.scam-analysis-loader { min-height: 225px; }
+}
+@media (max-width: 480px) {
+  .scam-detector-main { padding-inline: 12px; }
+  .scam-detector-titlebar { align-items: flex-start; }
+  .scam-detector-titlebar h1 { font-size: 22px; }
+  .scam-title-shield { width: 39px; height: 39px; border-radius: 11px; }
+  .scam-input-card,.scam-report-card,.scam-history-card { padding: 12px; }
+  .scam-input-type-selector { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .scam-input-type { min-height: 36px; font-size: 8px; }
+  .scam-textarea { min-height: 145px; }
+  .scam-report-header { flex-direction: column; }
+  .scam-risk-card { gap: 8px; padding: 10px; }
+  .scam-risk-score { width: 51px; height: 51px; }
+  .scam-risk-score::before { width: 42px; height: 42px; }
+  .scam-risk-caption { right: 8px; width: 84px; font-size: 5px; }
+  .scam-evidence-heading { flex-direction: column; gap: 4px; }
+  .scam-evidence-heading span { align-self: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scam-spin { animation: none; }
+  .scam-progress-track span { transition: none; }
+}
